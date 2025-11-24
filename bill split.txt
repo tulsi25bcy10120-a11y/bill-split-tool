@@ -1,0 +1,36 @@
+item_name = []
+item_price = []
+
+print("- BILL SPLITTER DEVICE -")
+print("Enter your items. Type 'done' as the name when finished.\n")
+
+while True:
+    name = input("Name of item: ")
+    if name.lower() == 'done':
+        break
+        
+    try:
+        price = float(input(f"Price for {name}: "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        continue
+
+    item_name.append(name)
+    item_price.append(price)
+
+if len(item_price) == 0:
+    print("No items entered. Exiting.")
+    exit()    # cannot use return outside functions
+
+people_count = int(input("How many people are dividing this?: "))
+
+subtotal = sum(item_price)
+grand_total = subtotal
+per_people = grand_total / people_count
+
+print("\n" + "=" * 30)
+print("=" * 30)
+print(f"Subtotal: ₹{subtotal:.2f}")
+print(f"Grand Total: ₹{grand_total:.2f}")
+print(f"Each people need to pay: ₹{per_people:.2f}")
+print("=" * 30)
