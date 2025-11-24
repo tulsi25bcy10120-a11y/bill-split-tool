@@ -1,0 +1,22 @@
+Program Report: Bill Splitter Device
+​Functionality & Features
+​The program successfully performs the  task of splitting a bill among a specified number of people.
+​Item Input: It allows us to enter a list of items and their  prices  until the we type  'done'.
+​Input Validation: It includes basic error handling using a try...except ValueError block to check wheter the price entered for an item is a valid input or not.
+​Total Calculation: It accurately calculates the subtotal (which is the grand_total in this code, (tax/tip is not included).
+​Split Calculation: It divides the grand_total by the number of people to determine the per_people share.
+​Output: It prints a clear, full final bill showing the subtotal, grand total, and the amount each people need to pay, upto two decimal places (:.2f).
+​Empty Bill Check: It also check wheter the iteam enerted is empty or not.
+​Code Logic Review
+​Initialization: The lists item_name and item_price are correctly used as empty lists.
+​Item Input Loop:
+​The while True: loop  controls item entry.
+​The if name.lower() == 'done': break statement is the correct way to exit the loop.
+​The try...except block is well-placed to handle invalid price input.
+​continue is used correctly to skip the current iteration upon invalid input, preventing the addition of a bad value to the lists.
+​Calculations:
+​subtotal = total amount calculated
+​grand_total = subtotal is logical in the absence of tax/tip.
+​per_people = grand_total / people_count is the standard formula for an even split.
+​Output Formatting: It shows us what is the total amount and then divide it among the total people.
+​
